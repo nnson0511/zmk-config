@@ -15,6 +15,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "BASE";
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |  DEL  |
@@ -33,6 +34,7 @@
         };
 
         lower_layer {
+            display-name = "LOWER";
 // ------------------------------------------------------------------------------------------------------------
 // |   `   |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |       | RET |  UP |      |      |      |                   |      |       |  UP   |  -   |   =   |  F12  |
@@ -51,18 +53,19 @@
         };
 
         raise_layer {
+            display-name = "RAISE";
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     | INS | PRSC | APPL |      |                   |      |       |       |      |   -   |   =   |
+// | BT_CLR| BT1 | BT2 | BT3  | BT4  | BT5  |                   |      |       |       |      |       | BOOTL |
+// |       |BOOTL| INS | PRSC | APPL | SYSRE|                   |      |       |       |      |   -   |   =   |
 // | CAPS  |     |     |      |      |      |                   |      |       |  UP   |      |   {   |   }   |
 // |       |     |     |      |      |      |        |  |       |      | LEFT  | DOWN  | RIGHT|       |       |
 //                 |     |      |      |      |        |  | HOME | PLAY |  END  |       | SHIFT|
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans                      &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &kp INS   &kp PSCRN &kp K_APP &trans                      &trans    &trans    &trans    &trans    &kp MINUS &kp EQUAL
-&kp CLCK  &trans    &trans    &trans    &trans    &trans                      &trans    &trans    &kp UP    &trans    &kp LBRC  &kp RBRC
-&trans    &trans    &trans    &trans    &trans    &trans    &trans   &trans   &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans
-                    &trans    &trans    &trans    &trans    &trans   &kp HOME &kp C_PP  &kp END   &trans    &kp RSHFT
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &trans    &trans    &trans    &trans    &trans    &bootloader
+&trans    &bootloader  &kp INS      &kp PSCRN    &kp K_APP    &sys_reset            &trans    &trans    &trans    &trans    &kp MINUS &kp EQUAL
+&kp CLCK  &trans       &trans       &trans       &trans       &trans                &trans    &trans    &kp UP    &trans    &kp LBRC  &kp RBRC
+&trans    &trans       &trans       &trans       &trans       &trans  &trans &trans &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans
+                       &trans       &trans       &trans       &trans  &trans &kp HOME &kp C_PP &kp END   &trans    &kp RSHFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
