@@ -11,11 +11,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    sensors {
-        status = "okay";
-        sensors = <&left_encoder &right_encoder>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
