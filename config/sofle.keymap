@@ -40,13 +40,13 @@
 // |       | RET |  UP |      |      |      |                   |      |       |  UP   |  -   |   =   |  F12  |
 // | CAPS  | LEFT| DOWN| RIGHT|      |      |                   |  6   | LEFT  | DOWN  | RIGHT|   0   |   \   |
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  {   |  }    |   ;   |   ;   |   \   |       |
-//                 |     |      |      |      |        |  |       |      |       |       |
+//                 |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &kp GRAVE &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                      &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
 &trans    &kp RET   &kp UP    &trans    &trans    &trans                      &trans    &trans    &kp UP    &kp MINUS &kp EQUAL &kp F12
 &kp CLCK  &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans                      &kp N6    &kp LEFT  &kp DOWN  &kp RIGHT &kp N0    &kp BSLH
 &trans    &kp EQUAL &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC  &trans   &trans   &kp LBRC  &kp RBRC  &kp SEMI  &kp SEMI  &kp BSLH  &trans
-                    &trans    &trans    &trans    &trans    &trans   &trans   &trans    &trans    &trans
+                    &trans    &trans    &trans    &trans    &trans   &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
