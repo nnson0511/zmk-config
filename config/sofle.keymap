@@ -56,13 +56,13 @@
             display-name = "RAISE";
 // ------------------------------------------------------------------------------------------------------------
 // | BT_CLR| BT1 | BT2 | BT3  | BT4  | BT5  |                   |OUT_TOG|      |       |      |   -   |   =   |
-// |       | INS | PRSC| APPL |      |      |                   |      |       |  UP   |  [   |   }   |       |
+// | UNLOCK| INS | PRSC| APPL |      |      |                   |      |       |  UP   |  [   |   }   |       |
 // | CAPS  |     |     |      |      |      |                   |      | LEFT  | DOWN  | RIGHT|   {   |       |
 // |       |     |     |      |      |      |        |  |       |      | HOME  | PLAY  | END  |       | SHIFT |
 //                 |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &out OUT_TOG &trans &trans &trans &kp MINUS &kp EQUAL
-&trans    &kp INS   &kp PSCRN &kp K_APP &trans    &trans                      &trans    &trans    &kp UP    &kp LBKT  &kp RBRC  &trans
+&studio_unlock &kp INS  &kp PSCRN &kp K_APP &trans    &trans                      &trans    &trans    &kp UP    &kp LBKT  &kp RBRC  &trans
 &kp CLCK  &trans    &trans    &trans    &trans    &trans                      &trans    &kp LEFT  &kp DOWN  &kp RIGHT &kp LBRC  &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans   &trans   &trans    &kp HOME  &kp C_PP  &kp END   &trans    &kp RSHFT
                     &trans    &trans    &trans    &trans    &trans   &trans   &trans    &trans    &trans    &trans
